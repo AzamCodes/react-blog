@@ -24,7 +24,7 @@ const commentRoute = require("../backend/routes/comments");
 dotenv.config();
 app.use(
   cors({
-    origin: ["https://reactblogverse.netlify.app"],
+    origin: ["http://localhost:5173"],
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -46,6 +46,9 @@ const storage = multer.diskStorage({
     fn(null, req.body.img);
     // fn(null,"image1.jpg")
   },
+});
+app.get("/", (req, res) => {
+  res.json("hello");
 });
 
 const upload = multer({ storage: storage });
