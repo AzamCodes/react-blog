@@ -56,6 +56,6 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 mongoose.connect(process.env.MONGO_URL);
 app.listen(process.env.PORT, () => {
   // console.log(process.env.MONGO_URL);
-  connectDB();
+  // connectDB();
   console.log("App is running on port " + process.env.PORT);
 });
