@@ -11,15 +11,15 @@ const userRoute = require("../backend/routes/users");
 const postRoute = require("../backend/routes/posts");
 const commentRoute = require("../backend/routes/comments");
 
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log("Database is connected successfully");
-    // console.log(req.body);
-  } catch (err) {
-    console.log(err);
-  }
-};
+// const connectDB = async () => {
+//   try {
+//     await mongoose.connect(process.env.MONGO_URL);
+//     console.log("Database is connected successfully");
+//     // console.log(req.body);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 // Middleware
 dotenv.config();
 app.use(
@@ -53,7 +53,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   // console.log(req.body)
   res.status(200).json("Image has been uploaded successfully!");
 });
-
+mongoose.connect(process.env.MONGO_URL);
 app.listen(process.env.PORT, () => {
   // console.log(process.env.MONGO_URL);
   connectDB();
