@@ -8,7 +8,7 @@ const verifyToken = (req, res, next) => {
     if (!token) {
       res.status(403).json("Token is not Valid!");
     }
-    req.userId = data._id;
+    req.userId = data;
     // console.log("PAssed");
     next();
   });
