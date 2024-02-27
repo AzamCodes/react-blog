@@ -24,7 +24,7 @@ const commentRoute = require("../backend/routes/comments");
 dotenv.config();
 app.use(
   cors({
-    origin: "https://reactblogverse.netlify.app",
+    origin: "https://blogverse-five.vercel.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
