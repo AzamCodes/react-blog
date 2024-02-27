@@ -24,7 +24,7 @@ const connectDB = async () => {
 dotenv.config();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://reactblogverse.netlify.app",
     methods: ["POST", "GET"],
     credentials: true,
   })
