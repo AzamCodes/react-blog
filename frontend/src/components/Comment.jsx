@@ -13,7 +13,7 @@ const Comment = ({ c, post }) => {
       await axios.delete(URL + "/api/comments/" + id, {
         withCredentials: true,
       });
-      window.location.reload(true);
+      // window.location.reload(true);
     } catch (err) {
       console.log(err);
     }
