@@ -25,7 +25,7 @@ dotenv.config();
 app.use(
   cors({
     origin: ["https://blogverse-omega.vercel.app"],
-    // methods: ["POST", "GET"],
+    methods: ["POST", "GET"],
     credentials: true,
   })
 );
