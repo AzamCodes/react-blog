@@ -74,8 +74,8 @@ const PostDetails = () => {
         { withCredentials: true }
       );
 
-      // setComment("");
-      // fetchPostComments();
+      setComment("");
+      fetchPostComments();
       // window.location.reload(true);
     } catch (err) {
       console.log(err);
