@@ -22,6 +22,26 @@ const commentRoute = require("../backend/routes/comments");
 // };
 // Middleware
 dotenv.config();
+app.use((req, res, next) => {
+  // Allow requests from a specific origin
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://blogverse-omega.vercel.app"
+  );
+
+  // Allow other necessary headers
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
+  );
+
+  // Continue to the next middleware
+  next();
+});
 app.use(
   cors({
     origin: "https://blogverse-omega.vercel.app",
