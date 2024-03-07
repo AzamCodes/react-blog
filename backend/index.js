@@ -26,22 +26,19 @@ app.use(
   cors({
     origin: "https://blogverse-omega.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE", "HEAD", "OPTIONS"],
+
     credentials: true,
   })
 );
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-//   res.header(
-//     "Access-Control-Allow-Origin",
-//     "https://blogverse-omega.vercel.app"
-//   );
-//   res.header(
-//     "Access-Control-Allow-Headers",
-//     "Origin, X-Requested-With, Content-Type, Accept"
-//   );
-//   res.header("Access-Control-Allow-Credentials", "true");
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://blogverse-omega.vercel.app"
+  );
+  res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
 app.use(express.json());
 app.use(cookieParser());
 app.use("/images", express.static(path.join(__dirname, "/images")));
