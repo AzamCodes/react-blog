@@ -24,7 +24,7 @@ const commentRoute = require("../backend/routes/comments");
 dotenv.config();
 app.use(
   cors({
-    origin: "https://blogverse-omega.vercel.app",
+    origin: true,
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
