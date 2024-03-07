@@ -13,6 +13,7 @@
       "methods": ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "https://blogverse-omega.vercel.app"
+        
       }
     }
   ]

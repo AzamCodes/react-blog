@@ -26,7 +26,6 @@ app.use(
   cors({
     origin: "https://blogverse-omega.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
-
     credentials: true,
   })
 );
