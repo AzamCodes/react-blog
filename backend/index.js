@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   // Allow requests from a specific origin
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://blogverse-omega.vercel.app"
+    "https://blogverse-5jfhwlt4z-azamcodes-projects.vercel.app"
   );
 
   // Allow other necessary headers
@@ -44,7 +44,7 @@ app.use((req, res, next) => {
 });
 app.use(
   cors({
-    origin: "https://blogverse-omega.vercel.app",
+    origin: "https://blogverse-5jfhwlt4z-azamcodes-projects.vercel.app",
     methods: ["POST", "GET", "PUT", "DELETE"],
     credentials: true,
   })
